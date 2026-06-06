@@ -4,7 +4,7 @@
   --color-background: #050a14;
   --color-foreground: #e8eaf6;
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-mono: var(--font-space-mono);
   --color-star-blue: #4fc3f7;
   --color-star-purple: #ce93d8;
   --color-star-cyan: #80deea;
@@ -17,6 +17,11 @@ body {
   color: #e8eaf6;
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   overflow-x: hidden;
+  cursor: none;
+}
+
+a, button {
+  cursor: none;
 }
 
 @keyframes twinkle {

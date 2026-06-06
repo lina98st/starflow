@@ -95,7 +95,7 @@ export default function FeaturesSection() {
         initial={{ opacity: 0, y: 30 }}
         animate={headingInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="text-center mb-20"
+        className="mb-20"
       >
         <p className="text-cyan-400 text-sm tracking-[0.25em] uppercase font-medium mb-4">
           Mission Capabilities
@@ -111,7 +111,7 @@ export default function FeaturesSection() {
             reach orbit
           </span>
         </h2>
-        <p className="mt-4 text-slate-400 max-w-xl mx-auto">
+        <p className="mt-4 text-slate-400 max-w-xl">
           A complete platform built for teams who move fast and aim higher.
         </p>
       </motion.div>
