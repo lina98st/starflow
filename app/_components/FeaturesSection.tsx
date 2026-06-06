@@ -64,7 +64,7 @@ function FeatureCard({
       ref={ref}
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.7, delay: (index % 3) * 0.12, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.7, delay: (index % 3) * 0.12, ease: [0.22, 1, 0.36, 1] as const }}
       className="glass glass-hover rounded-2xl p-7 flex flex-col gap-4"
     >
       <div
@@ -94,7 +94,7 @@ export default function FeaturesSection() {
         ref={headingRef}
         initial={{ opacity: 0, y: 30 }}
         animate={headingInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as const }}
         className="mb-20"
       >
         <p className="text-cyan-400 text-sm tracking-[0.25em] uppercase font-medium mb-4">

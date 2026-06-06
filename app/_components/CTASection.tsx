@@ -13,7 +13,7 @@ export default function CTASection() {
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={inView ? { opacity: 1, scale: 1 } : {}}
-        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] as const }}
         className="max-w-3xl mx-auto text-center glass rounded-3xl py-20 px-10 relative overflow-hidden"
         style={{
           boxShadow: '0 0 80px rgba(79, 195, 247, 0.08), 0 0 160px rgba(106, 27, 154, 0.06)',
