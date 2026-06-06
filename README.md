@@ -16,7 +16,7 @@ A futuristic, space-themed landing page built with Next.js 16, Tailwind CSS v4, 
 
 ---
 
-## 🚀 Features
+## Features
 
 - **Animated star field** — 180 individually twinkling DOM stars with randomised size, color, duration, and delay
 - **Nebula blobs** — radial-gradient layers that slowly drift across the background
@@ -28,7 +28,7 @@ A futuristic, space-themed landing page built with Next.js 16, Tailwind CSS v4, 
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -41,7 +41,7 @@ A futuristic, space-themed landing page built with Next.js 16, Tailwind CSS v4, 
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 starflow/
@@ -61,7 +61,7 @@ starflow/
 
 ---
 
-## 🏁 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -94,7 +94,7 @@ npm run lint    # Run ESLint
 
 ---
 
-## 🎨 Design System
+## Design System
 
 ### Color palette
 
@@ -132,7 +132,7 @@ This project uses **Tailwind CSS v4**, which drops `tailwind.config.js` entirely
 
 ---
 
-## 🧱 Architecture Notes
+## Architecture Notes
 
 ### Server vs. Client Components
 
@@ -148,7 +148,7 @@ This project uses **Tailwind CSS v4**, which drops `tailwind.config.js` entirely
 
 ---
 
-## 🔭 Planned Extensions
+## Planned Extensions
 
 - [ ] Three.js / React Three Fiber 3D background scene
 - [ ] Pricing section with glassmorphism cards
@@ -158,6 +158,6 @@ This project uses **Tailwind CSS v4**, which drops `tailwind.config.js` entirely
 
 ---
 
-## 📄 License
+## License
 
 MIT © 2026 Starflow
