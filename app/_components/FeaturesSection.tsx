@@ -6,45 +6,45 @@ import { useRef } from 'react'
 
 const features = [
   {
-    icon: '🛸',
-    title: 'Hyperdrive Automation',
+    icon: '🌟',
+    title: 'Natal Charts',
     description:
-      'Set workflows in motion and watch them execute at warp speed. Automate repetitive tasks across your entire galaxy of tools.',
+      'Generate precise birth charts based on the exact position of celestial bodies at the moment you were born. Rooted in astronomical data.',
     color: '#4fc3f7',
   },
   {
-    icon: '🌌',
-    title: 'Deep Space Analytics',
+    icon: '🔭',
+    title: 'Live Sky Map',
     description:
-      'Explore your data like never before. Real-time dashboards that map the universe of your business metrics.',
+      'Real-time star map showing constellations, planets, and deep space objects above your exact location — updated to the second.',
     color: '#ce93d8',
   },
   {
-    icon: '⭐',
-    title: 'Stellar Collaboration',
+    icon: '🪐',
+    title: 'Planetary Transits',
     description:
-      'Bring your crew together across any timezone. Shared workspaces with live presence and instant sync.',
+      'Track the precise movement of every planet through the zodiac. Understand orbital mechanics alongside their astrological significance.',
     color: '#80deea',
   },
   {
-    icon: '🚀',
-    title: 'Zero-Gravity Deployment',
+    icon: '🌙',
+    title: 'Lunar Calendar',
     description:
-      'Ship at the speed of thought. One-click deployments with automatic rollbacks if anything drifts off course.',
+      'Follow the moon through all its phases. Plan around new moons, full moons, and eclipses — with the science behind the tides explained.',
     color: '#ffb74d',
   },
   {
-    icon: '🔭',
-    title: 'AI Mission Control',
+    icon: '☄️',
+    title: 'Cosmic Events',
     description:
-      'Your AI co-pilot monitors everything, surfaces anomalies before they become crises, and suggests optimal trajectories.',
+      'Never miss a meteor shower, solar eclipse, or planetary conjunction. A science-backed calendar of everything happening in the sky.',
     color: '#a5d6a7',
   },
   {
-    icon: '🛡️',
-    title: 'Quantum Security',
+    icon: '📡',
+    title: 'Deep Space Science',
     description:
-      'Enterprise-grade encryption and zero-trust architecture that keeps your data safe from even the darkest corners of space.',
+      'Explore black holes, dark matter, and the expanding universe. Curated research from NASA, ESA, and leading astrophysics institutions.',
     color: '#ef9a9a',
   },
 ]
@@ -98,21 +98,21 @@ export default function FeaturesSection() {
         className="mb-20"
       >
         <p className="text-cyan-400 text-sm tracking-[0.25em] uppercase font-medium mb-4">
-          Mission Capabilities
+          What You Can Explore
         </p>
         <h2 className="text-4xl sm:text-5xl font-black text-white leading-tight">
-          Everything you need to{' '}
+          The universe,{' '}
           <span
             className="glow-text-purple text-transparent bg-clip-text"
             style={{
               backgroundImage: 'linear-gradient(90deg, #ce93d8, #4fc3f7)',
             }}
           >
-            reach orbit
+            explained
           </span>
         </h2>
         <p className="mt-4 text-slate-400 max-w-xl">
-          A complete platform built for teams who move fast and aim higher.
+          From the astrology of ancient civilisations to the astrophysics of today — all in one place.
         </p>
       </motion.div>
 

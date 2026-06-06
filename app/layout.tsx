@@ -14,9 +14,9 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Starflow — Navigate Projects at the Speed of Light",
+  title: "Starflow — Where Science Meets the Stars",
   description:
-    "AI-powered workflows that take your team beyond the stars. Automate, collaborate, and ship at warp speed.",
+    "Explore astrology grounded in science. Star charts, natal charts, planetary transits, lunar calendars, and deep space discovery in one place.",
 };
 
 export default function RootLayout({

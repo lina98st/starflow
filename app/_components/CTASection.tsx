@@ -29,22 +29,21 @@ export default function CTASection() {
         />
 
         <p className="text-cyan-400 text-sm tracking-[0.25em] uppercase font-medium mb-6">
-          Ready for Launch?
+          Begin Your Cosmic Journey
         </p>
         <h2 className="text-4xl sm:text-5xl font-black text-white mb-6 leading-tight">
-          Begin your{' '}
+          The sky is not{' '}
           <span
             className="glow-text text-transparent bg-clip-text"
             style={{
               backgroundImage: 'linear-gradient(135deg, #4fc3f7 0%, #80deea 100%)',
             }}
           >
-            journey
-          </span>{' '}
-          today
+            the limit
+          </span>
         </h2>
         <p className="text-slate-400 mb-10 max-w-md mx-auto">
-          Join thousands of teams already operating at stellar velocity. Free forever for small crews.
+          Join thousands of stargazers, astrologers, and scientists already exploring the universe with Starflow. Free to start, infinite to discover.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
@@ -53,10 +52,10 @@ export default function CTASection() {
               background: 'linear-gradient(135deg, #1565c0, #4fc3f7)',
             }}
           >
-            Launch for Free
+            Start Exploring for Free
           </button>
           <button className="glass glass-hover px-10 py-4 rounded-2xl font-semibold text-slate-200 text-base">
-            Talk to Mission Control
+            Browse the Sky Map
           </button>
         </div>
       </motion.div>

@@ -60,7 +60,7 @@ export default function HeroSection() {
             className="glass rounded-full px-5 py-2 mb-8 inline-flex items-center gap-2"
           >
             <span className="w-2 h-2 rounded-full bg-cyan-400 inline-block animate-pulse" />
-            <span className="text-sm text-cyan-300 font-medium tracking-wide">Now in Beta — Join the Galaxy</span>
+            <span className="text-sm text-cyan-300 font-medium tracking-wide">Where Science Meets the Stars</span>
           </motion.div>
 
           {/* Main title */}
@@ -90,7 +90,7 @@ export default function HeroSection() {
             custom={0.45}
             className="text-lg sm:text-xl text-slate-300 mb-2 leading-relaxed"
           >
-            Navigate your projects at the speed of light.
+            Explore the cosmos. Decode celestial patterns.
           </motion.p>
           <motion.p
             variants={fadeUp}
@@ -99,7 +99,7 @@ export default function HeroSection() {
             custom={0.5}
             className="text-base text-slate-500 mb-10 leading-relaxed"
           >
-            AI-powered workflows that take your team beyond the stars.
+            Astrology grounded in science — star charts, planetary transits, and deep space discovery in one place.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -117,10 +117,10 @@ export default function HeroSection() {
                 backgroundSize: '200% 200%',
               }}
             >
-              Start for Free
+              Start Exploring
             </button>
             <button className="glass glass-hover px-8 py-4 rounded-2xl font-semibold text-base text-slate-200">
-              Watch Demo →
+              View Star Charts →
             </button>
           </motion.div>
 
@@ -133,9 +133,9 @@ export default function HeroSection() {
             className="flex gap-10 mt-14 border-t border-white/5 pt-10"
           >
             {[
-              { value: '10k+', label: 'Astronauts' },
-              { value: '99.9%', label: 'Uptime' },
-              { value: '∞', label: 'Possibilities' },
+              { value: '88', label: 'Constellations' },
+              { value: '4,000+', label: 'Stars Mapped' },
+              { value: '∞', label: 'To Discover' },
             ].map(({ value, label }) => (
               <div key={label}>
                 <div className="text-2xl font-bold text-cyan-300 glow-text">{value}</div>
