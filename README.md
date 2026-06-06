@@ -6,6 +6,8 @@
 
 A futuristic astrology and astronomy landing page built with Next.js 16, Tailwind CSS v4, and Framer Motion. Explore star charts, natal charts, planetary transits, and deep space science — wrapped in a dark space aesthetic with glassmorphism UI and smooth animations.
 
+**Live:** [starflow-alpha.vercel.app](https://starflow-alpha.vercel.app)
+
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38bdf8?style=flat-square&logo=tailwindcss)](https://tailwindcss.com)
