@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef } from 'react'
+import { useMemo } from 'react'
 
 interface Star {
   x: number
@@ -30,7 +30,7 @@ function generateStars(count: number): Star[] {
 }
 
 export default function StarField() {
-  const starsRef = useRef<Star[]>(generateStars(180))
+  const stars = useMemo(() => generateStars(180), [])
 
   return (
     <div
@@ -38,7 +38,7 @@ export default function StarField() {
       aria-hidden="true"
       style={{ zIndex: 0 }}
     >
-      {starsRef.current.map((star, i) => (
+      {stars.map((star, i) => (
         <span
           key={i}
           className="star"
