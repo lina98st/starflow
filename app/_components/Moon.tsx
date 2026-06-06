@@ -17,11 +17,11 @@ function drawMoon(ctx: CanvasRenderingContext2D, size: number) {
 
   // 1. Base surface — radial gradient simulating sphere lit from top-left
   const base = ctx.createRadialGradient(cx * 0.60, cy * 0.52, 0, cx, cy, r)
-  base.addColorStop(0,    '#f0eddc')
-  base.addColorStop(0.28, '#d6d2b4')
-  base.addColorStop(0.55, '#a8a68c')
-  base.addColorStop(0.78, '#727060')
-  base.addColorStop(1,    '#26261e')
+  base.addColorStop(0,    '#faf8ec')
+  base.addColorStop(0.28, '#e8e4c8')
+  base.addColorStop(0.55, '#c0bea4')
+  base.addColorStop(0.78, '#909080')
+  base.addColorStop(1,    '#38382e')
   ctx.fillStyle = base
   ctx.fillRect(0, 0, size, size)
 
@@ -90,17 +90,17 @@ function drawMoon(ctx: CanvasRenderingContext2D, size: number) {
   // 4. Limb darkening — edges fade to dark
   const limb = ctx.createRadialGradient(cx * 0.82, cy * 0.80, r * 0.42, cx, cy, r)
   limb.addColorStop(0.52, 'rgba(0,0,0,0)')
-  limb.addColorStop(0.80, 'rgba(0,0,0,0.10)')
-  limb.addColorStop(1,    'rgba(0,0,0,0.72)')
+  limb.addColorStop(0.82, 'rgba(0,0,0,0.07)')
+  limb.addColorStop(1,    'rgba(0,0,0,0.52)')
   ctx.fillStyle = limb
   ctx.fillRect(0, 0, size, size)
 
   // 5. Terminator — gibbous phase, night side on the right
   const term = ctx.createRadialGradient(cx + r * 1.08, cy, 8, cx + r * 0.88, cy, r * 1.35)
   term.addColorStop(0,    'rgba(0,0,0,0)')
-  term.addColorStop(0.32, 'rgba(0,0,0,0)')
-  term.addColorStop(0.62, 'rgba(0,0,0,0.50)')
-  term.addColorStop(1,    'rgba(0,0,0,0.92)')
+  term.addColorStop(0.38, 'rgba(0,0,0,0)')
+  term.addColorStop(0.65, 'rgba(0,0,0,0.38)')
+  term.addColorStop(1,    'rgba(0,0,0,0.78)')
   ctx.fillStyle = term
   ctx.fillRect(0, 0, size, size)
 
