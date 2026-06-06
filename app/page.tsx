@@ -19,8 +19,8 @@ export default function Home() {
           ✦ Starflow
         </span>
         <div
-          className="hidden sm:flex items-center gap-8 text-xs text-slate-400 tracking-widest uppercase"
-          style={{ fontFamily: 'var(--font-space-mono)' }}
+          className="hidden sm:flex items-center gap-8 text-sm font-light text-slate-300 tracking-wide"
+          style={{ fontFamily: 'var(--font-geist-sans)' }}
         >
           <a href="#" className="hover:text-cyan-300 transition-colors">Explore</a>
           <a href="#" className="hover:text-cyan-300 transition-colors">Charts</a>
