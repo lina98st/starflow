@@ -1,36 +1,163 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
 
-## Getting Started
+# ✦ Starflow
 
-First, run the development server:
+**Navigate your projects at the speed of light.**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+A futuristic, space-themed landing page built with Next.js 16, Tailwind CSS v4, and Framer Motion. Dark nebula backgrounds, glassmorphism UI, animated star fields, and smooth scroll-reveal animations — all server-rendered and production-ready.
+
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
+[![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38bdf8?style=flat-square&logo=tailwindcss)](https://tailwindcss.com)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-ff0055?style=flat-square&logo=framer)](https://www.framer.com/motion)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
+
+</div>
+
+---
+
+## 🚀 Features
+
+- **Animated star field** — 180 individually twinkling DOM stars with randomised size, color, duration, and delay
+- **Nebula blobs** — radial-gradient layers that slowly drift across the background
+- **Glassmorphism UI** — `backdrop-filter: blur` cards and nav with hover glow transitions
+- **Framer Motion animations** — fade-up on hero entry, scroll-triggered reveal on feature cards and CTA
+- **Orbit rings** — concentric rings that rotate at different speeds around the hero title
+- **Responsive layout** — mobile-first grid, collapses cleanly from 3-column to single-column
+- **Zero layout shift** — fonts loaded via `next/font`, CSS animations declared in global stylesheet
+
+---
+
+## 🛠 Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 16 (App Router) |
+| UI Library | React 19 |
+| Styling | Tailwind CSS v4 |
+| Animations | Framer Motion v12 |
+| Font | Geist Sans via `next/font/google` |
+| Language | TypeScript 5 |
+
+---
+
+## 📁 Project Structure
+
+```
+starflow/
+├── app/
+│   ├── _components/
+│   │   ├── StarField.tsx        # Fixed star field + nebula blobs (Client Component)
+│   │   ├── HeroSection.tsx      # Hero title, badge, CTAs, stats, orbit rings
+│   │   ├── FeaturesSection.tsx  # Scroll-reveal feature cards grid
+│   │   └── CTASection.tsx       # Bottom call-to-action panel
+│   ├── globals.css              # Tailwind import, @theme tokens, CSS keyframes
+│   ├── layout.tsx               # Root layout + metadata
+│   └── page.tsx                 # Page entry (Server Component)
+├── public/
+├── CLAUDE.md                    # AI assistant context for this repo
+└── package.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🏁 Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prerequisites
 
-## Learn More
+- Node.js 18+
+- npm / yarn / pnpm / bun
 
-To learn more about Next.js, take a look at the following resources:
+### Install & run
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# Clone the repo
+git clone https://github.com/lina98st/starflow.git
+cd starflow
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Install dependencies
+npm install
 
-## Deploy on Vercel
+# Start the development server
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Other commands
+
+```bash
+npm run build   # Production build
+npm run start   # Start production server
+npm run lint    # Run ESLint
+```
+
+---
+
+## 🎨 Design System
+
+### Color palette
+
+| Token | Hex | Usage |
+|---|---|---|
+| Background | `#050a14` | Page background |
+| Cyan | `#4fc3f7` | Primary accent, glow, CTA |
+| Purple | `#ce93d8` | Gradient midpoint, headings |
+| Teal | `#80deea` | Gradient endpoint, star color |
+
+### CSS utility classes
+
+| Class | Effect |
+|---|---|
+| `.glass` | `backdrop-blur(16px)` + semi-transparent border |
+| `.glass-hover` | Smooth glow transition on hover |
+| `.glow-text` | Cyan multi-layer `text-shadow` |
+| `.glow-text-purple` | Purple multi-layer `text-shadow` |
+| `.star` | Positioned element with `twinkle` animation |
+| `.float` | Gentle vertical oscillation |
+| `.btn-glow` | Pulsing `box-shadow` animation |
+| `.orbit-ring` | Slow-rotating border ring |
+
+### Tailwind v4 note
+
+This project uses **Tailwind CSS v4**, which drops `tailwind.config.js` entirely. Custom tokens are registered in the `@theme inline` block inside `app/globals.css`:
+
+```css
+@theme inline {
+  --color-star-blue: #4fc3f7;
+  --color-star-purple: #ce93d8;
+  /* ... */
+}
+```
+
+---
+
+## 🧱 Architecture Notes
+
+### Server vs. Client Components
+
+- `page.tsx` and `layout.tsx` are **Server Components** — no `'use client'`, no browser APIs.
+- All animation and interactivity lives in `app/_components/` as **Client Components** (marked with `'use client'`).
+- This keeps the JS bundle lean: static markup is streamed from the server, client JS hydrates only what needs it.
+
+### Animation strategy
+
+- **Entry animations** (hero): Framer Motion `variants` with staggered `custom` delays — no `useEffect` needed.
+- **Scroll animations** (features, CTA): `useInView` from Framer Motion with `once: true` so cards animate in once and stay visible.
+- **Continuous animations** (stars, rings, nebula): pure CSS `@keyframes` — zero JS overhead at runtime.
+
+---
+
+## 🔭 Planned Extensions
+
+- [ ] Three.js / React Three Fiber 3D background scene
+- [ ] Pricing section with glassmorphism cards
+- [ ] Waitlist / email capture form
+- [ ] Dark/light mode toggle (currently dark-only by design)
+- [ ] Page transition animations with `AnimatePresence`
+
+---
+
+## 📄 License
+
+MIT © 2026 Starflow
