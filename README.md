@@ -2,9 +2,9 @@
 
 # ✦ Starflow
 
-**Navigate your projects at the speed of light.**
+**Where science meets the stars.**
 
-A futuristic, space-themed landing page built with Next.js 16, Tailwind CSS v4, and Framer Motion. Dark nebula backgrounds, glassmorphism UI, animated star fields, and smooth scroll-reveal animations — all server-rendered and production-ready.
+A futuristic astrology and astronomy landing page built with Next.js 16, Tailwind CSS v4, and Framer Motion. Explore star charts, natal charts, planetary transits, and deep space science — wrapped in a dark space aesthetic with glassmorphism UI and smooth animations.
 
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
@@ -16,15 +16,23 @@ A futuristic, space-themed landing page built with Next.js 16, Tailwind CSS v4, 
 
 ---
 
+## About
+
+Starflow sits at the intersection of astrology and astrophysics. The site presents six core features — natal charts, a live sky map, planetary transits, a lunar calendar, a cosmic events tracker, and a deep space science feed — all framed around the idea that ancient astrological traditions and modern science are looking at the same sky.
+
+---
+
 ## Features
 
 - **Animated star field** — 180 individually twinkling DOM stars with randomised size, color, duration, and delay
 - **Nebula blobs** — radial-gradient layers that slowly drift across the background
+- **Custom cursor** — glowing cyan dot with a lagging ring, driven by `requestAnimationFrame`
 - **Glassmorphism UI** — `backdrop-filter: blur` cards and nav with hover glow transitions
 - **Framer Motion animations** — fade-up on hero entry, scroll-triggered reveal on feature cards and CTA
-- **Orbit rings** — concentric rings that rotate at different speeds around the hero title
+- **Orbit rings** — concentric rings rotating at different speeds, positioned as right-side decoration
+- **Asymmetric layout** — left-aligned hero content, orbit rings anchored to the right
+- **Space Mono nav font** — monospace typeface on navigation links, buttons, and footer
 - **Responsive layout** — mobile-first grid, collapses cleanly from 3-column to single-column
-- **Zero layout shift** — fonts loaded via `next/font`, CSS animations declared in global stylesheet
 
 ---
 
@@ -36,7 +44,7 @@ A futuristic, space-themed landing page built with Next.js 16, Tailwind CSS v4, 
 | UI Library | React 19 |
 | Styling | Tailwind CSS v4 |
 | Animations | Framer Motion v12 |
-| Font | Geist Sans via `next/font/google` |
+| Fonts | Geist Sans + Space Mono via `next/font/google` |
 | Language | TypeScript 5 |
 
 ---
@@ -49,10 +57,11 @@ starflow/
 │   ├── _components/
 │   │   ├── StarField.tsx        # Fixed star field + nebula blobs (Client Component)
 │   │   ├── HeroSection.tsx      # Hero title, badge, CTAs, stats, orbit rings
-│   │   ├── FeaturesSection.tsx  # Scroll-reveal feature cards grid
-│   │   └── CTASection.tsx       # Bottom call-to-action panel
+│   │   ├── FeaturesSection.tsx  # Scroll-reveal feature cards grid (6 topics)
+│   │   ├── CTASection.tsx       # Bottom call-to-action panel
+│   │   └── CustomCursor.tsx     # Glowing cursor with lagging ring (rAF loop)
 │   ├── globals.css              # Tailwind import, @theme tokens, CSS keyframes
-│   ├── layout.tsx               # Root layout + metadata
+│   ├── layout.tsx               # Root layout + metadata + font setup
 │   └── page.tsx                 # Page entry (Server Component)
 ├── public/
 ├── CLAUDE.md                    # AI assistant context for this repo
@@ -145,15 +154,17 @@ This project uses **Tailwind CSS v4**, which drops `tailwind.config.js` entirely
 - **Entry animations** (hero): Framer Motion `variants` with staggered `custom` delays — no `useEffect` needed.
 - **Scroll animations** (features, CTA): `useInView` from Framer Motion with `once: true` so cards animate in once and stay visible.
 - **Continuous animations** (stars, rings, nebula): pure CSS `@keyframes` — zero JS overhead at runtime.
+- **Custom cursor**: `requestAnimationFrame` loop with linear interpolation (`lerp`) so the ring lags naturally behind the dot.
 
 ---
 
 ## Planned Extensions
 
 - [ ] Three.js / React Three Fiber 3D background scene
-- [ ] Pricing section with glassmorphism cards
+- [ ] Interactive star chart with real constellation data
+- [ ] Natal chart generator with user birth date input
+- [ ] Cosmic events calendar with countdown timers
 - [ ] Waitlist / email capture form
-- [ ] Dark/light mode toggle (currently dark-only by design)
 - [ ] Page transition animations with `AnimatePresence`
 
 ---
