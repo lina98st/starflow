@@ -158,6 +158,12 @@ This project uses **Tailwind CSS v4**, which drops `tailwind.config.js` entirely
 
 ---
 
+## A note on how this was built
+
+This is my first project built with [Claude Code](https://claude.ai/code). I wanted to try out AI-assisted development to see what the workflow feels like — this isn't how I normally work. Overall a fun experiment, and a good way to get a polished starting point up quickly.
+
+---
+
 ## License
 
 MIT © 2026 Starflow
