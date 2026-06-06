@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Moon from './Moon'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -22,11 +23,12 @@ const fadeIn = {
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex flex-col justify-center px-8 lg:px-16">
-      {/* Orbit rings — pinned to the right as a decorative element */}
+      {/* Orbit rings + Moon — pinned to the right as a decorative element */}
       <div
         className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none hidden lg:flex items-center justify-center"
         style={{ width: 720, height: 720 }}
       >
+        <Moon />
         <div
           className="orbit-ring absolute"
           style={{ width: 340, height: 340, '--orbit-duration': '25s' } as React.CSSProperties}
