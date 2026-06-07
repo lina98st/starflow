@@ -119,7 +119,7 @@ export default function Moon() {
   }, [])
 
   return (
-    <div className="relative float">
+    <div aria-hidden="true" className="relative float">
       {/* Atmosphere glow */}
       <div
         className="absolute rounded-full pointer-events-none"

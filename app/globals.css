@@ -24,6 +24,31 @@ a, button {
   cursor: none;
 }
 
+/* Respect the user's OS-level motion preference: restore the native cursor
+   (the custom cursor disables itself too, see CustomCursor.tsx) and stop
+   all decorative looping animations. */
+@media (prefers-reduced-motion: reduce) {
+  body, a, button {
+    cursor: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Visible keyboard-focus ring — the glassmorphism surfaces have low contrast,
+   so interactive elements need an explicit focus style beyond the browser default. */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #80deea;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
 @keyframes twinkle {
   0%, 100% { opacity: 0.2; transform: scale(1); }
   50%       { opacity: 1;   transform: scale(1.4); }

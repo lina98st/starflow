@@ -68,6 +68,7 @@ function FeatureCard({
       className="glass glass-hover rounded-2xl p-7 flex flex-col gap-4"
     >
       <div
+        aria-hidden="true"
         className="text-3xl w-12 h-12 flex items-center justify-center rounded-xl"
         style={{ background: `${feature.color}18` }}
       >

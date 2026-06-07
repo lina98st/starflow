@@ -18,14 +18,27 @@ const STAR_COLORS = [
   'rgba(128,222,234,0.8)',
 ]
 
+// Deterministic PRNG (mulberry32) — Math.random() would make the server-rendered
+// star positions differ from the client's on hydration, since each environment
+// calls it with a different sequence. A fixed seed makes both sides agree.
+function mulberry32(seed: number) {
+  return () => {
+    seed = (seed + 0x6d2b79f5) | 0
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed)
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
+  }
+}
+
 function generateStars(count: number): Star[] {
+  const random = mulberry32(1337)
   return Array.from({ length: count }, () => ({
-    x: Math.random() * 100,
-    y: Math.random() * 100,
-    size: Math.random() * 2.5 + 0.5,
-    duration: Math.random() * 4 + 2,
-    delay: Math.random() * 5,
-    color: STAR_COLORS[Math.floor(Math.random() * STAR_COLORS.length)],
+    x: random() * 100,
+    y: random() * 100,
+    size: random() * 2.5 + 0.5,
+    duration: random() * 4 + 2,
+    delay: random() * 5,
+    color: STAR_COLORS[Math.floor(random() * STAR_COLORS.length)],
   }))
 }
 

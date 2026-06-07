@@ -7,6 +7,10 @@ export default function CustomCursor() {
   const ringRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    // Users who prefer reduced motion get the native cursor back (see globals.css)
+    // instead of a continuously animated dot-and-ring that follows the pointer.
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
     let mouseX = 0, mouseY = 0
     let ringX = 0, ringY = 0
     let rafId: number
@@ -43,6 +47,7 @@ export default function CustomCursor() {
     <>
       <div
         ref={dotRef}
+        aria-hidden="true"
         className="fixed top-0 left-0 pointer-events-none z-[9999]"
         style={{
           width: 6,
@@ -55,6 +60,7 @@ export default function CustomCursor() {
       />
       <div
         ref={ringRef}
+        aria-hidden="true"
         className="fixed top-0 left-0 pointer-events-none z-[9998]"
         style={{
           width: 36,
